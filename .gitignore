@@ -1,24 +1,32 @@
-# Compiled class file
+# 忽略生成的文件
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+*.o
+*.pyc
+*.dll
+ 
+# 忽略敏感信息
+*.key
+*.pem
+*.env
+*.config
+ 
+# 忽略用户特定文件
+*.log
+*.swp
+*.DS_Store
+Thumbs.db
+/**/*.iml
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+ 
+# 忽略构建产物和输出
+/bin
+/build
+/dist
+/target
+/**/target/
+
+
+.project
+/.classpath
+/logs
