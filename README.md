@@ -67,11 +67,10 @@ pom.xml
 ### 2. 投注提交和存储
 - 校验SessionKey有效性，反向索引快速查找
 - 使用分段锁，用`ReentrantLock`数组，保护客户投注数据
-- 动态数组存储客户历史投注，仅保留最高金额
-- `ConcurrentSkipListMap`实现自动排序
+- 使用`ConcurrentSkipListSet`仅保留20条用户最高投注金额，并实现自动排序
 
 ### 3. 获取高投注列表
-- 直接从预排序的`ConcurrentSkipListMap`获取排序好的数据
+- 直接从预排序的`ConcurrentSkipListSet`获取排序好的数据
 - 无实时计算开销,响应时间快
 
 
